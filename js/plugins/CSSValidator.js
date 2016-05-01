@@ -47,7 +47,7 @@ app.plugins = (function(ns , undefined){
     return ns;
 }(app.plugins || {}));
 
-
+//TODO preview plugin (using the proxy, file_get_contents the entire page, add to iframe?)
 
 //TODO service worker?
 //http://jigsaw.w3.org/css-validator/validator
