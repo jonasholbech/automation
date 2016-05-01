@@ -5,6 +5,7 @@ var Main = {
         Observer.publish('loaded');
         
         Main.addScript("HTMLValidator", 'Validate HTML');
+        Main.addScript("CSSValidator", 'Validate CSS');
         Main.loadScripts();
 
 
@@ -29,7 +30,7 @@ var Main = {
             Observer.publish('pluginsLoaded');
         } else {
             var tag = document.createElement('script');
-            tag.src = "js/plugins/"+s.script+".js";
+            tag.src = "js/plugins/"+s.script+".js?r="+Date.now();
 
             tag.onload = Main.loadScripts;
             tag.onreadystatechange = function () {
